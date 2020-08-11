@@ -1,0 +1,16 @@
+#quizStarter{
+    background-color: black;
+    width: 500px;
+    height: 300px;
+    background-image: url(images/QuizTime.jpg);
+    border-color:white;
+}
+
+#scoreViewer{
+    background-color: black;
+    width: 500px;
+    height: 300px;
+    background-image: url(images/HighScores.jpg);
+    border-color: black;
+    color: black;
+}
