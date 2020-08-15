@@ -20,12 +20,12 @@
 </head>
 
 <body>
-  <div class="row">
+  <div class="row hideLater">
     <div class="col text-center">
       <h1 class="tableStrong">Question</h1>
     </div>
   </div>
-  <div class="row">
+  <div class="row hideLater2">
     <div class="col-1"></div>
 
     <div class="col-10 media">
@@ -49,12 +49,12 @@
     </div>
   </div>
   <br />
-  <div class="row">
+  <div class="row hideLater3">
     <div class="col text-center">
       <h3 class="tableStrong">Progress Bar</h3>
     </div>
   </div>
-  <div class="row">
+  <div class="row hideLater4">
     <div class="col-1"></div>
     <div id="q1" class="col-10">
       <div class="progress" style="height: 25px;">
@@ -64,10 +64,92 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row hideLater5">
     <div class="col-1"></div>
     <div id="q1" class="col-10">
       <h1 id="time" class="text-center">60 secs</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-1"></div>
+    <div id="q1" class="col-10">
+    <table class="table text-center">
+      <thead class="thead-dark">
+        <tr>
+          <th id="userScoreHeader">Your Score</th>
+          <th id="userScoreHeader">Initials</th>
+          <th id="userScoreHeader">Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" id="testScore">-</th>
+          <td id="testTaker">-</td>
+          <td id="testTime">-</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table text-center hideNow showLater">
+      <thead class="thead-dark">
+        <tr>
+          <th>Top Scores</th>
+          <th>Initials</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody id="topTen">
+        <tr id="topTenRow">
+          <th scope="row" id="top1userScore">1</th>
+          <td id="top1userName">Mark</td>
+          <td id="top1userTime">Otto</td>
+        </tr>
+        <tr>
+          <th scope="row" id="top2">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+        <tr>
+          <th scope="row" id="top3">3</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+        <tr>
+          <th scope="row" id="top4">4</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+        <tr>
+          <th scope="row" id="top5">5</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+        <tr>
+          <th scope="row" id="top6">6</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+        <tr>
+          <th scope="row" id="top7">7</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+        <tr>
+          <th scope="row" id="top8">8</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+        <tr>
+          <th scope="row" id="top9">9</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+        <tr>
+          <th scope="row" id="top10">10</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+        </tr>
+      </tbody>
+    </table>
     </div>
   </div>
   </div>
@@ -83,6 +165,7 @@
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
   <script src="script.js"></script>
+  
 </body>
 
 </html>

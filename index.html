@@ -13,7 +13,8 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <!-- Google font -->
@@ -40,17 +41,7 @@
       <div class="row text-center">
         <div class="col-1"></div>
         <div class="col">
-          <form method="get" action="simpleform.asp">
-            Enter your initials: <input type="text" name="userInitials">
-            <br>
-            <input id="quizStarter" type="button" onclick = "beginQuiz()" value="Submit form"> 
-          </form>
-            <!-- <form id="initialForm" method="POST" action="simpleform.asp">
-            <label for="initialText">Initials</label>
-            <input type="text" placeholder="ABC" name="initialsText" id="quizStarter"> 
-          </form> -->
-          
-          <!-- <a 
+          <a
             href="beginQuiz.html"
             class="btn btn-primary btn-lg break"
             id="quizStarter"
@@ -58,7 +49,7 @@
             role="button"
             aria-disabled="true"
             >It's
-          </a> -->
+          </a>
           <br />
           <div class="text-center">
             <h3 class="tableStrong">Instructions to start the quiz:</h3>
@@ -66,10 +57,13 @@
           <br />
           <div class="break">
             <ul class="lead text-left">
-              <li>Enter your initials and press the "Quiz Time" button.</li>
+              <li>Press the "Quiz Time" button to start the test.</li>
               <li>
                 There are a total of 6 questions and you will have 10 seconds to
                 answer each question.
+              </li>
+              <li>
+                At the end, you will be asked for your initials.
               </li>
               <li>
                 Based on the number you answer correctly, your score will be
@@ -79,10 +73,7 @@
           </div>
         </div>
         <div class="col break2">
-          <!-- <a href="viewScores.html" id="scoreViewer" class="btn btn-secondary btn-lg break2" tabindex="-1" role="button"
-          aria-disabled="true">Here are
-        </a> -->
-          <table class="table text-center">
+          <!-- <table class="table text-center">
             <thead class="thead-dark">
               <tr>
                 <th id="userScoreHeader">Your Score</th>
@@ -97,8 +88,8 @@
                 <td id="testTime">-</td>
               </tr>
             </tbody>
-          </table>
-          <table class="table text-center">
+          </table> -->
+          <!-- <table class="table text-center">
             <thead class="thead-dark">
               <tr>
                 <th>Top Scores</th>
@@ -158,7 +149,7 @@
                 <td>Thornton</td>
               </tr>
             </tbody>
-          </table>
+          </table> -->
         </div>
         <div class="col-1"></div>
       </div>
