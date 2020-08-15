@@ -12,7 +12,7 @@ window.onload = function () {
   ];
    
   if (localStorage.getItem('topTenScores')) {
-    testTakers = localStorage.getItem('topTenScores')
+    testTakers = JSON.parse(localStorage.getItem('topTenScores'))
   }
 
   var quizDone = false;
