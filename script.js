@@ -14,9 +14,8 @@ window.onload = function () {
   var quizDone = false;
   // var topTenScores= [];
   // testTakers = JSON.parse(localStorage.getItem("topTenScores"));
-  console.log(testTakers);
-  console.log(testTakers.innerHTML);
-
+  // console.log(testTakers);
+  
   var userInformation = { userName: "", userScore: 0, testDuration: 0 };
 
   var questionArray = [
@@ -76,7 +75,7 @@ window.onload = function () {
 
   function beginQuiz() {
     document.querySelector(".hideNow").setAttribute("style", "display:none;");
-    console.log("test is beginning in the begin quiz function");
+    // console.log("test is beginning in the begin quiz function");
     displayQuestion();
     timeLeft();
   }
@@ -84,20 +83,20 @@ window.onload = function () {
   function calculateDuration(x) {
     duration = 60 - x;
     if (quizDone != true) {
-      console.log("test duration is: " + duration);
+      // console.log("test duration is: " + duration);
     }
   }
 
-  console.log("number of questions: " + questionArray.length);
+  // console.log("number of questions: " + questionArray.length);
 
   function displayQuestion() {
     var answerSelected = "";
-    console.log("answerSelected before selection is: " + answerSelected);
-    console.log("t is: " + t);
-    console.log("display question function entered");
+    // console.log("answerSelected before selection is: " + answerSelected);
+    // console.log("t is: " + t);
+    // console.log("display question function entered");
     if (t === questionArray.length || quizDone) {
       updateScoreBoard();
-      console.log(duration + " when the finishQuiz function is called");
+      // console.log(duration + " when the finishQuiz function is called");
       quizDone = true;
       finishQuiz(duration);
     } else {
@@ -110,37 +109,37 @@ window.onload = function () {
   }
 
   document.querySelector("#a1").addEventListener("click", function (event) {
-    console.log("clicked a1");
+    // console.log("clicked a1");
     answerSelected = "A";
     checkAnswer(answerSelected);
   });
   document.querySelector("#a2").addEventListener("click", function (event) {
-    console.log("clicked a2");
+    // console.log("clicked a2");
     answerSelected = "B";
     checkAnswer(answerSelected);
   });
   document.querySelector("#a3").addEventListener("click", function (event) {
-    console.log("clicked a3");
+    // console.log("clicked a3");
     answerSelected = "C";
     checkAnswer(answerSelected);
   });
   document.querySelector("#a4").addEventListener("click", function (event) {
-    console.log("clicked a4");
+    // console.log("clicked a4");
     answerSelected = "D";
     checkAnswer(answerSelected);
   });
 
   function checkAnswer(x) {
-    console.log("answer " + x + " is being checked");
-    console.log("the correct answer is " + questionArray[t].correctAnswer);
+    // console.log("answer " + x + " is being checked");
+    // console.log("the correct answer is " + questionArray[t].correctAnswer);
     if (x === questionArray[t].correctAnswer) {
-      console.log("answer is correct");
+      // console.log("answer is correct");
       correctCount++;
-      console.log("Correct count is: " + correctCount);
+      // console.log("Correct count is: " + correctCount);
     } else {
-      console.log("answer is wrong");
+      // console.log("answer is wrong");
       wrongCount++;
-      console.log("Wrong count is: " + wrongCount);
+      // console.log("Wrong count is: " + wrongCount);
     }
     nextQuestion();
   }
@@ -148,7 +147,7 @@ window.onload = function () {
   function nextQuestion() {
     t++;
     document.querySelector;
-    console.log("t is now: " + t);
+    // console.log("t is now: " + t);
     displayQuestion();
     updateProgressBar(t);
     updateScoreBoard();
@@ -156,42 +155,42 @@ window.onload = function () {
 
   function updateProgressBar(x) {
     if (x === 1) {
-      console.log("t in the update progress bar is: " + x);
+      // console.log("t in the update progress bar is: " + x);
       document
         .querySelector(".progress-bar")
         .setAttribute("style", "width:16.7%;");
       document.querySelector(".progress-bar").textContent = "1/6";
     }
     if (x === 2) {
-      console.log("t in the update progress bar is: " + x);
+      // console.log("t in the update progress bar is: " + x);
       document
         .querySelector(".progress-bar")
         .setAttribute("style", "width:33%;");
       document.querySelector(".progress-bar").textContent = "2/6";
     }
     if (x === 3) {
-      console.log("t in the update progress bar is: " + x);
+      // console.log("t in the update progress bar is: " + x);
       document
         .querySelector(".progress-bar")
         .setAttribute("style", "width:50%;");
       document.querySelector(".progress-bar").textContent = "3/6";
     }
     if (x === 4) {
-      console.log("t in the update progress bar is: " + x);
+      // console.log("t in the update progress bar is: " + x);
       document
         .querySelector(".progress-bar")
         .setAttribute("style", "width:67%;");
       document.querySelector(".progress-bar").textContent = "4/6";
     }
     if (x === 5) {
-      console.log("t in the update progress bar is: " + x);
+      // console.log("t in the update progress bar is: " + x);
       document
         .querySelector(".progress-bar")
         .setAttribute("style", "width:83.7%;");
       document.querySelector(".progress-bar").textContent = "5/6";
     }
     if (x === 6) {
-      console.log("t in the update progress bar is: " + x);
+      // console.log("t in the update progress bar is: " + x);
       document
         .querySelector(".progress-bar")
         .setAttribute("style", "width:100%;");
@@ -209,7 +208,7 @@ window.onload = function () {
         document.querySelector("#time").innerHTML = "Test Finished";
         quizDone = true;
         if (quizDone != true) {
-          console.log("quiz is done from the timer");
+          // console.log("quiz is done from the timer");
           updateProgressBar(6);
           finishQuiz(duration);
         }
@@ -255,8 +254,8 @@ window.onload = function () {
       .querySelector(".showLater")
       .setAttribute("style", "display:table;");
     testTakers.push(userInformation);
-    console.log(testTakers);
-    console.log(testTakers[0].userName);
+    // console.log(testTakers);
+    // console.log(testTakers[0].userName);
     sortArray();
   }
 
@@ -267,7 +266,7 @@ window.onload = function () {
 
   function sortArray() {
     event.preventDefault();
-    console.log(testTakers);
+    // console.log(testTakers);
     var filtered = [
       {
         username: "",
@@ -290,7 +289,7 @@ window.onload = function () {
       }
       return comparison * -1;
     }
-    console.log(filtered);
+    // console.log(filtered);
     topTenList(filtered);
   }
 
@@ -307,11 +306,11 @@ window.onload = function () {
     console.log(topTenScores);
     for (let i = 0; i < 10; i++) {
       topTenScores[i] = filtered[i];
-      console.log(topTenScores[i]);
+      // console.log(topTenScores[i]);
     }
     console.log(filtered);
     localStorage.setItem("topTenScores", JSON.stringify(topTenScores));
-    console.log(topTenScores);
+    // console.log(topTenScores);
     displayTopTen(topTenScores);
   }
 
