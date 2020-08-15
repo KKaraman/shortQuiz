@@ -10,7 +10,11 @@ window.onload = function () {
       testDuration: 0,
     },
   ];
-  testTakers = JSON.parse(localStorage.getItem("topTenScores"));
+   
+  if (localStorage.getItem('topTenScores')) {
+    testTakers = localStorage.getItem('topTenScores')
+  }
+
   var quizDone = false;
   // var topTenScores= [];
   // testTakers = JSON.parse(localStorage.getItem("topTenScores"));
