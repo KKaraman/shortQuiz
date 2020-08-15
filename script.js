@@ -312,5 +312,30 @@ window.onload = function () {
     console.log(filtered);
     localStorage.setItem("topTenScores", JSON.stringify(topTenScores));
     console.log(topTenScores);
+    displayTopTen(topTenScores);
   }
-};
+
+  function displayTopTen(topTenScores) {
+    document.querySelector("#top1userScore").innerHTML = topTenScores[0].userScore;
+    document.querySelector("#top1userName").innerHTML = topTenScores[0].userName;
+    document.querySelector("#top2userScore").innerHTML = topTenScores[1].userScore;
+    document.querySelector("#top2userName").innerHTML = topTenScores[1].userName;
+    document.querySelector("#top3userScore").innerHTML = topTenScores[2].userScore;
+    document.querySelector("#top3userName").innerHTML = topTenScores[2].userName;
+    document.querySelector("#top4userScore").innerHTML = topTenScores[3].userScore;
+    document.querySelector("#top4userName").innerHTML = topTenScores[3].userName;
+    document.querySelector("#top5userScore").innerHTML = topTenScores[4].userScore;
+    document.querySelector("#top5userName").innerHTML = topTenScores[4].userName;
+    document.querySelector("#top6userScore").innerHTML = topTenScores[5].userScore;
+    document.querySelector("#top6userName").innerHTML = topTenScores[5].userName;
+    document.querySelector("#top7userScore").innerHTML = topTenScores[6].userScore;
+    document.querySelector("#top7userName").innerHTML = topTenScores[6].userName;
+    document.querySelector("#top8userScore").innerHTML = topTenScores[7].userScore;
+    document.querySelector("#top8userName").innerHTML = topTenScores[7].userName;
+    document.querySelector("#top9userScore").innerHTML = topTenScores[8].userScore;
+    document.querySelector("#top9userName").innerHTML = topTenScores[8].userName;
+    document.querySelector("#top10userScore").innerHTML = topTenScores[9].userScore;
+    document.querySelector("#top10userName").innerHTML = topTenScores[9].userName;
+  }
+}
+
