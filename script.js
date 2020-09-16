@@ -143,6 +143,7 @@ window.onload = function () {
     } else {
       // console.log("answer is wrong");
       wrongCount++;
+      timeLeft-=5;
       // console.log("Wrong count is: " + wrongCount);
     }
     nextQuestion();
